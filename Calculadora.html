@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Divisão</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 20pt Arial;
+            width: 160px;
+        }
+        div#res {
+            margin-top: 15px;
+        }
+        h1 {
+            color: rgb(144, 190, 132);
+        }
+       
+        div {
+            color: rgb(144, 190, 132);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="num1" id="num1"> /
+    <input type="number" name="num2" id="num2">
+    <input type="button" value="=" onclick="Dividir()">
+    <div id="res"><strong>Resultado</strong></div>
+    <script>
+        function Dividir() {
+            var n1 = window.document.getElementById('num1')
+            var n2 = window.document.getElementById('num2')
+            var res = window.document.getElementById('res')
+            var nu1 = Number(n1.value)
+            var nu2 = Number(n2.value)
+            var s = nu1 / nu2
+            res.innerHTML = `A divisão entre ${nu1} e ${nu2} é igual a <strong>${s}</storng>`       
+    
+    }
+    </script> 
+    
+</body>
+</html>
